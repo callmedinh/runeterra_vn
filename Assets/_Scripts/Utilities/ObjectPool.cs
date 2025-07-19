@@ -24,6 +24,7 @@ namespace _Scripts.Utilities
                 for (int i = 0; i < item.initialSize; i++)
                 {
                     GameObject obj =  Instantiate(item.prefab, this.transform);
+                    obj.name = item.key.ToString();
                     obj.SetActive(false);
                     stack.Push(obj);
                 }
@@ -64,6 +65,6 @@ namespace _Scripts.Utilities
     {
         public CardType key;                // unique key like "Unit", "Spell", etc.
         public GameObject prefab;
-        public int initialSize = 10;
+        public int initialSize = 20;
     }
 }

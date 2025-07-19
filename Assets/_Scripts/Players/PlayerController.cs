@@ -33,9 +33,9 @@ namespace _Scripts.Players
                 Hand.AddCardToHand(Deck.DrawCard());
             }
         }
-        public void StartTurn(int turn)
+        public void StartTurn(int amount)
         {
-            Mana.StartTurn(turn);
+            Mana.StartTurn(amount);
             Hand.AddCardToHand(Deck.DrawCard());
         }
     }

@@ -9,16 +9,16 @@ namespace _Scripts.Systems
     public class HandSystem
     {
         private List<Card> _handCards = new();
-        public int maxHandSize = 6;
-        public event Action<Card> OnCardAdded;
+        public readonly int MaxHandSize = 6;
+        public event Action<Card> CardAdded;
         public event Action OnCardPlayed;
 
         public void AddCardToHand(Card card)
         {
-            if (_handCards.Count > maxHandSize) return;
+            if (_handCards.Count > MaxHandSize) return;
             _handCards.Add(card);
             Debug.Log("Card added, invoking event");
-            OnCardAdded?.Invoke(card);
+            CardAdded?.Invoke(card);
         }
 
         public void RemoveCardFromHand(Card card)

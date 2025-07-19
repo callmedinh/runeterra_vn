@@ -1,12 +1,13 @@
 using System;
 using UnityEngine;
 
-namespace _Scripts
+namespace _Scripts.Systems
 {
     public class ManaSystem
     {
         public int CurrentMana { get; private set; }
         public int MaxMana { get; private set; }
+        public event Action ManaChanged;
 
         public ManaSystem()
         {
@@ -16,7 +17,8 @@ namespace _Scripts
         public void StartTurn(int turn)
         {
             MaxMana = Mathf.Min(10, turn);
-            CurrentMana = MaxMana;
+            CurrentMana += MaxMana;
+            ManaChanged?.Invoke();
         }
 
         public bool HasEnough(int cost) => CurrentMana >= cost;
@@ -25,6 +27,7 @@ namespace _Scripts
         {
             if (!HasEnough(cost)) throw new Exception("Không đủ ");
             CurrentMana -= cost;
+            ManaChanged?.Invoke();
         }
     }
 }

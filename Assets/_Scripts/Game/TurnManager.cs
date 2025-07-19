@@ -14,7 +14,7 @@ namespace _Scripts.Cores
         {
             _isPlayerTurn = player;
             var current = _isPlayerTurn ? this.owner : opponent;
-            
+            current.StartTurn(1);
         }
 
         public void EndTurn()
