@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "205418621413",
+    "project_id": "runeterravn-d2214",
+    "storage_bucket": "runeterravn-d2214.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:205418621413:android:a5eba6d4ca8678b0ebe70c",
+        "android_client_info": {
+          "package_name": "com.callmedinh.runeterravn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKvdEpCC7LTgJiMmEfZLeU0T691mMZ-9o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

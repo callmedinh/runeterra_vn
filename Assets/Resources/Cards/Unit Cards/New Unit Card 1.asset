@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e23198b219f74bfcbccd67213ce827b2, type: 3}
+  m_Name: New Unit Card 1
+  m_EditorClassIdentifier: 
+  id: 
+  cardName: "Cung Th\u1EE7 M\xEA Linh"
+  description: "Cung th\u1EE7 thi\u1EC7n x\u1EA1 \u0111\u1EBFn t\u1EEB v\xF9ng \u0111\u1EA5t
+    M\xEA Linh."
+  artwork: {fileID: 0}
+  manaCost: 3
+  type: 0
+  attack: 4
+  health: 2
