@@ -97,3 +97,24 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+# Firebase native libraries
+[Aa]ssets/Plugins/Android/*.aar
+[Aa]ssets/Plugins/Android/*.jar
+[Aa]ssets/Plugins/Android/*.so
+[Aa]ssets/Plugins/iOS/*.a
+[Aa]ssets/Plugins/iOS/*.framework/
+[Aa]ssets/Plugins/iOS/*.h
+
+# Native libs
+*.dll
+*.a
+*.lib
+*.so
+*.dylib
+*.bundle
+*.xcframework
+*.framework
+
+# Firebase configs
+google-services.json
+GoogleService-Info.plist
