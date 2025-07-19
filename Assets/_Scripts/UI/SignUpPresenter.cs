@@ -39,7 +39,7 @@ namespace _Scripts.UI
                 }
 
                 // Firebase user has been created.
-                UIManager.Instance.ShowUIView(ViewsContants.SignInView);
+                UIManager.Instance.ShowUIView(ViewsType.SignInView);
                 AuthResult result = task.Result;
                 Debug.LogFormat("Firebase user created successfully: {0} ({1})",
                     result.User.DisplayName, result.User.UserId);

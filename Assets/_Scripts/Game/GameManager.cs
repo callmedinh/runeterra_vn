@@ -19,7 +19,7 @@ namespace _Scripts.Game
 
         void StartGame()
         {
-            UIManager.Instance.ShowUIView(ViewsContants.GameplayView);
+            UIManager.Instance.ShowUIView(ViewsType.GameplayView);
             player1.Init();
             player2.Init();
             _currentPlayer = player1;

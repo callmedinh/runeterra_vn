@@ -7,7 +7,7 @@ namespace _Scripts.UI
 {
     public class UIManager : Singleton<UIManager>
     {
-        private Dictionary<string, UIBaseView> _uiMap =  new Dictionary<string, UIBaseView>();
+        private Dictionary<ViewsType, UIBaseView> _uiMap =  new();
         [SerializeField] private SignInPresenter signInPresenter;
         [SerializeField] private SignUpPresenter signUpPresenter;
         [SerializeField] private GameplayPresenter gameplayPresenter;
@@ -15,9 +15,9 @@ namespace _Scripts.UI
         public override void Awake()
         {
             base.Awake();
-            _uiMap.Add(ViewsContants.SignInView, signInPresenter);
-            _uiMap.Add(ViewsContants.SingUpView, signUpPresenter);
-            _uiMap.Add(ViewsContants.GameplayView, gameplayPresenter);
+            _uiMap.Add(ViewsType.SignInView, signInPresenter);
+            _uiMap.Add(ViewsType.SingUpView, signUpPresenter);
+            _uiMap.Add(ViewsType.GameplayView, gameplayPresenter);
             HideAllViews();
         }
 
@@ -33,7 +33,7 @@ namespace _Scripts.UI
                 view.Hide();
             }
         }
-        public void ShowUIView(string viewName)
+        public void ShowUIView(ViewsType viewName)
         {
             if (_uiMap.TryGetValue(viewName, out UIBaseView view))
             {
@@ -45,5 +45,12 @@ namespace _Scripts.UI
                 _currentView.Show();
             }
         }
+    }
+
+    public enum ViewsType
+    {
+        SignInView,
+        SingUpView,
+        GameplayView,
     }
 }

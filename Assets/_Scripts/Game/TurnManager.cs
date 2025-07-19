@@ -6,14 +6,14 @@ namespace _Scripts.Cores
 {
     public class TurnManager : Singleton<TurnManager>
     {
-        public PlayerController player;
-        public PlayerController enemy;
+        public PlayerController owner;
+        public PlayerController opponent;
         private bool _isPlayerTurn;
 
         public void StartTurn(bool player)
         {
             _isPlayerTurn = player;
-            var current = _isPlayerTurn ? this.player : enemy;
+            var current = _isPlayerTurn ? this.owner : opponent;
             
         }
 
